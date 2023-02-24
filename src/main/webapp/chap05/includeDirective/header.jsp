@@ -1,0 +1,5 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+
+<div id = "header">
+		<h3>[메일] [카페] [블로그] [뉴스] [쇼핑]</h3>
+	</div>
