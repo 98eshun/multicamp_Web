@@ -48,8 +48,8 @@
 			}
 			catch (Exception e) {
 				e.printStackTrace();
+			}
 		}
-	}
 }
 	sql = "select * from jdbc_test";
 	
@@ -71,7 +71,7 @@
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-	}
+		}
 }
 	try{
 		if(!conn.isClosed()){
@@ -80,7 +80,7 @@
 	}
 	catch (Exception e) {
 		e.printStackTrace();
-}
+	}
 	
 %>
 
