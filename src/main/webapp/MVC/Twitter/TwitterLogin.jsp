@@ -2,8 +2,8 @@
 			import="mvc.twitter.*"
 %>
 
-<jsp:useBean id="loginDO" class="mvc.twitter.TwitterLoginDO"/>
-<jsp:useBean id="twitterDAO" class="mvc.twitter.TwitterDAO"/>
+<jsp:useBean id="loginDO" class="mvc.twitter.TwitterLoginDO" scope = "page"/> <!-- scope = 페이지 마다 만들어라 -->
+<jsp:useBean id="twitterDAO" class="mvc.twitter.TwitterDAO" scope = "session"/> <!-- scope = 세션 마다 만들어라 -->
 <jsp:setProperty name = "loginDO" property="*"/>
 
 <%

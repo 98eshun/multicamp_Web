@@ -2,39 +2,6 @@
 			import = "java.util.*, mvc.twitter.*"
 %>
 
-<%
-if(request.getMethod().equals("POST")){
-	request.setCharacterEncoding("UTF-8");
-}
-%>
-	
-<jsp:useBean id="TwitterDAO" class="mvc.twitter.TwitterDAO" scope = "session"/>
-<jsp:useBean id="TwitterDO" class="mvc.twitter.TwitterDO"/>
-<jsp:setProperty name="TwitterDO" property="message"/>
-
-<%
-	String command = request.getParameter("command");
-	if(request.getMethod().equals("POST") && command !=null && command.equals("logout")){
-		
-		
-		if(command.equals("TwitterInsert")){
-			TwitterDO.setId((String)session.getAttribute("id"));
-			TwitterDAO.insertTwitter(TwitterDO);
-		}
-		else if(command.equals("logout")){
-			session.invalidate();
-			response.sendRedirect("TwitterLogin.jsp");
-		}
-	}
-	
-	
-	ArrayList<TwitterDO> list = TwitterDAO.getAllTwitter();
-	String result = "";
-	
-	for(TwitterDO tDO : list){
-		result += "<li>" + tDO.getId() + ":::" + tDO.getMessage() + ":::" + tDO.getDate() + "</li>";
-	}
-%>
 <!DOCTYPE html>
 <html>
 <head>

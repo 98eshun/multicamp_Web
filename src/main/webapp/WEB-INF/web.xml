@@ -31,5 +31,19 @@
   	<param-name>workspace</param-name>
   	<param-value>C:projects/workspace</param-value>
   </context-param>
+  
+  <context-param>
+  	<param-name>adminID</param-name>
+  	<param-value>longlee</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>adminPasswd</param-name>
+  	<param-value>6789</param-value>
+  </context-param>
+  
+  <listener>
+  	<listener-class>chap11.initialMember</listener-class> <!-- annotation의 역할을 수행 -->
+  </listener>
 
 </web-app>

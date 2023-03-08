@@ -21,7 +21,7 @@
 	ArrayList<TwitterDO> list = twitterDAO.getAllTwitter();
 	String	result = "";
 	
-	for(TwitterDO tDO: list) {
+	for(TwitterDO tDO: list) {	// 반복할 때 마다 TwitterDO가 나옴 
 		result += "<li>" + tDO.getId() + " ::: " + tDO.getMessage() + " ::: " + tDO.getDate() + "</li>";
 	}
 %>
