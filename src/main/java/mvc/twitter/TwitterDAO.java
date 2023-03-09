@@ -3,8 +3,6 @@ package mvc.twitter;
 import java.sql.*;
 import java.util.ArrayList;
 
-import chap08.JdbcTestDOEx;
-
 public class TwitterDAO {
 	private Connection conn = null;
 	private Statement stmt = null;
@@ -87,7 +85,8 @@ public class TwitterDAO {
 
 	public int insertTwitter(TwitterDO twitterDO) {
 		int rowCount = 0;
-		sql = "insert into twitter(no, id, message) values(twitter_seq.nextval,?, ?)";
+		sql = "insert into twitter(no, id, message) "
+			+ "values(twitter_seq.nextval,?, ?)";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);

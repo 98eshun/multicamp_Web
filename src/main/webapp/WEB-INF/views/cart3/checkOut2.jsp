@@ -24,7 +24,6 @@
 	<hr />
 	
 
-
 	
 	<form method = "POST">
 		<input type = "hidden" name="command" value="clearCart"/>
